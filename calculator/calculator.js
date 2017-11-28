@@ -10,7 +10,7 @@ Skeleton:
 2. return the resulting value as an integer
 */
 
-var calculate = function(str) {
+const calculate = (str) => {
     // 1. evaluate / processs the string
     // 2. return the resulting value as an integer
     return eval(str);
@@ -38,7 +38,7 @@ var calculate = function(str) {
   4. return new string
 */
 
-var assembleString = function(input, string) {
+const assembleString = (input, string) => {
     let resultString = string;
     // 1. if input is a number: concatenate it to string
     if (parseInt(input)) resultString = resultString.concat(input);

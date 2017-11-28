@@ -2,7 +2,7 @@
 
 const express = require('express');
 const app = express();
-const handlers = require('./handlers');
+const {callCalculate, callAssembleString} = require('./handlers');
 
 const headers = {
     'access-control-allow-origin': '*',
@@ -12,8 +12,8 @@ const headers = {
     'Content-Type': 'application/json'
 };
 
-app.get('/api/calculator/string/:str/input/:in', handlers.callAssembleString);
-app.get('/api/calculator/string/:str', handlers.callCalculate);
+app.get('/api/calculator/string/:str/input/:in', callAssembleString);
+app.get('/api/calculator/string/:str', callCalculate);
 
 app.listen(3000, function () {
     console.log('listening on port 3000!');
