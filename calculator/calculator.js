@@ -1,7 +1,7 @@
-// IOCE
+// IOCE for calculate
 /*
-Input: a calculation that needs to be performed that will be passed in as a string 
-Output: the resulting number value (integer) of that calculation
+Input: a calculation as a string 
+Output: number value (integer) result of evaluated calculation
 */
 
 /*
@@ -16,10 +16,10 @@ var calculate = function(str) {
     return eval(str);
 };
 
-// IOCE
+// IOCE for assembleString
 /* 
   Contract: Assembles a string of numbers and symbols
-  Input: input number or symbol, string
+  Input: number or symbol, string
   Output: new string
 */
 

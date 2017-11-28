@@ -24,7 +24,7 @@ describe('testing the calculator', () => {
             expect(assembleString(input, string)).toEqual(expected);
         })
 
-        it('changes last character to new symbol when a new symbol (+, x, /) is used as input', () => {
+        it('changes last symbol to new symbol when a new symbol (+, *, /) is used as input', () => {
             const input = '+';
             const string = '1/';
             const expected = '1+';
@@ -35,6 +35,20 @@ describe('testing the calculator', () => {
             const input = '/';
             const string = '10';
             const expected = '10/';
+            expect(assembleString(input, string)).toEqual(expected);
+        })
+
+        it ('concatenates input to end of string if last character is a symbol, one before that is a number, and input character is "-"', () => {
+            const input = '-';
+            const string = '10/';
+            const expected = '10/-';
+            expect(assembleString(input, string)).toEqual(expected);
+        })
+
+        it ('changes last character to input if last character is "-" and one before that is a symbol (+, *, /)', () => {
+            const input = '-';
+            const string = '10/-';
+            const expected = '10/-';
             expect(assembleString(input, string)).toEqual(expected);
         })
     })
