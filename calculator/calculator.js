@@ -55,6 +55,15 @@ var assembleString = function(input, string) {
     }
     // 3a.if input is a - sign:
     if (input === '-') {
+        // 3b. if last character is minus sign '-'
+        if (resultString[resultString.length - 1] === '-') {
+            // 3d.if character before that is a number: concatinate and return result
+            if (!isNaN(parseInt(resultString[resultString.length - 2]))) resultString = resultString.concat(input);
+            // 3c.if character before that is a symbol: do nothing and return result
+            return resultString;
+        }
+        // 3d.if last character in string is a different symbol: concatenate it to string
+        resultString = resultString.concat(input);
     }
     // 4. return new string
     return resultString;

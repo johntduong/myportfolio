@@ -31,24 +31,38 @@ describe('testing the calculator', () => {
             expect(assembleString(input, string)).toEqual(expected);
         })
 
-        it ('concatenates input to end of string when last character is a number', () => {
+        it('concatenates input to end of string when last character is a number', () => {
             const input = '/';
             const string = '10';
             const expected = '10/';
             expect(assembleString(input, string)).toEqual(expected);
         })
 
-        it ('concatenates input to end of string if last character is a symbol, one before that is a number, and input character is "-"', () => {
+        it('concatenates input if last character is a number', () => {
+            const input = '-';
+            const string = '10';
+            const expected = '10-';
+            expect(assembleString(input, string)).toEqual(expected);
+        })
+
+        it('concatenates input to end of string if last character is a symbol, one before that is a number, and input character is "-"', () => {
             const input = '-';
             const string = '10/';
             const expected = '10/-';
             expect(assembleString(input, string)).toEqual(expected);
         })
 
-        it ('changes last character to input if last character is "-" and one before that is a symbol (+, *, /)', () => {
+        it('returns string unchanged if last character is "-" and one before that is a symbol (+, *, /)', () => {
             const input = '-';
             const string = '10/-';
             const expected = '10/-';
+            expect(assembleString(input, string)).toEqual(expected);
+        })
+
+        it('returns string unchanged if last two characters are "-" and input is also "-"', () => {
+            const input = '-';
+            const string = '10--';
+            const expected = '10--';
             expect(assembleString(input, string)).toEqual(expected);
         })
     })
