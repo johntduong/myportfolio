@@ -12,7 +12,7 @@ const headers = {
     'Content-Type': 'application/json'
 };
 
-app.get('/api/calculator/string/:str/input/:in', callAssembleString);
+app.get('/api/calculator/string/:str/input/:input', callAssembleString);
 app.get('/api/calculator/string/:str', callCalculate);
 
 app.listen(3000, function () {
