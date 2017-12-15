@@ -1,0 +1,24 @@
+{
+  "name": "eka-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bookshelf": "^0.12.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "knex": "^0.13.0",
+    "pg": "^7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.13.2"
+  }
+}
