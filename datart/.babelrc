@@ -1,0 +1,28 @@
+{
+    "presets": [
+        "es2015",
+        "react",
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": "last 2 versions"
+                },
+                "loose": true,
+                "modules": false
+            }
+        ],
+        "stage-0"
+    ],
+    "plugins": [
+        "babel-plugin-transform-class-properties",
+        "transform-object-rest-spread"
+    ],
+    "env": {
+        "test": {
+            "plugins": [
+                "transform-es2015-modules-commonjs"
+            ]
+        }
+    }
+}
