@@ -1,10 +1,13 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
+// @flow
+
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import type { Match } from "react-router-dom";
 
 const App = () => (
-  return (
-    <h1>Hello</h1>
-  )
+  <div className="app">
+    <h1>Hello World</h1>
+  </div>
 );
 
 export default App;
