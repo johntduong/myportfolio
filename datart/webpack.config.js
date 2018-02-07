@@ -1,24 +1,26 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     context: __dirname,
-    entry: './js/ClientApp.jsx',
+    entry: ['webpack-dev-server/client?http://localhost:8080','./js/ClientApp.jsx'],
     output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: 'bundle.js'
+        path: path.join(__dirname, 'public'),
+        filename: 'bundle.js',
+        publicPath: '/public/'
+    },
+    devServer: {
+        hot: false,
+        publicPath: '/public/',
+        historyApiFallback: true
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
+                loader: "babel-loader"
             }
         ]
-    },
-    devServer: {
-        publicPath: '/public/'
     }
 };
