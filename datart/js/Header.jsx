@@ -5,7 +5,7 @@ import AppBar from "material-ui/AppBar";
 const Header = () => (
   <MuiThemeProvider>
     <AppBar
-      title="Title"
+      title="Wall Sculpture and Granite"
       iconClassNameRight="muidocs-icon-navigation-expand-more"
     />
   </MuiThemeProvider>
