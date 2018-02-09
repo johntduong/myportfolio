@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import Header from "./Header";
@@ -28,9 +29,21 @@ class Home extends Component {
             open={this.state.open}
             onRequestChange={open => this.setState({ open })}
           >
-            <MenuItem>Home</MenuItem>
-            <MenuItem>Artwork</MenuItem>
-            <MenuItem>Contact</MenuItem>
+            <MenuItem>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                Home
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/tbd" style={{ textDecoration: "none" }}>
+                Artwork
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/tbd" style={{ textDecoration: "none" }}>
+                Contact
+              </Link>
+            </MenuItem>
           </Drawer>
         </MuiThemeProvider>
         <ImageGridList />
