@@ -8,10 +8,16 @@ class Home extends Component {
   state = {
     open: false
   };
+
+  handleToggle = event => {
+    event.preventDefault();
+    this.setState({ open: !this.state.open });
+  };
+
   render() {
     return (
       <div className="home">
-        <Header />
+        <Header handler={this.handleToggle} />
         <ImageGridList />
       </div>
     );

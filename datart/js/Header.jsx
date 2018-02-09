@@ -10,9 +10,12 @@ const muiTheme = getMuiTheme({
   }
 });
 
-const Header = () => (
+const Header = props => (
   <MuiThemeProvider muiTheme={muiTheme}>
-    <AppBar iconClassNameRight="muidocs-icon-navigation-expand-more" />
+    <AppBar
+      iconClassNameRight="muidocs-icon-navigation-expand-more"
+      onLeftIconButtonClick={props.handler}
+    />
   </MuiThemeProvider>
 );
 
