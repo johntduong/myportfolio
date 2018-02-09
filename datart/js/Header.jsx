@@ -4,20 +4,15 @@ import getMuiTheme from "material-ui/styles/getMuiTheme";
 import AppBar from "material-ui/AppBar";
 
 const muiTheme = getMuiTheme({
-  palette: {
-    color: "blueGrey500"
-  },
   appBar: {
+    color: "#607D8B",
     height: 50
   }
 });
 
 const Header = () => (
   <MuiThemeProvider muiTheme={muiTheme}>
-    <AppBar
-      title="Wall Sculpture and Granite"
-      iconClassNameRight="muidocs-icon-navigation-expand-more"
-    />
+    <AppBar iconClassNameRight="muidocs-icon-navigation-expand-more" />
   </MuiThemeProvider>
 );
 
