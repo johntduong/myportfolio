@@ -1,3 +1,5 @@
+@import "../node_modules/react-image-gallery/styles/css/image-gallery.css";
+
 * {
   box-sizing: border-box;
 }
@@ -10,4 +12,17 @@
   font-family: "Amatic SC", cursive;
   font-size: 35px;
   margin: -3px 15px 5px;
+}
+
+.image-gallery {
+  margin: auto;
+  max-width: 50%;
+}
+
+.image-gallery-slide {
+  text-align: center;
+}
+
+.image-gallery-slide img {
+  max-width: 50%;
 }

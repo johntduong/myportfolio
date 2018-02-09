@@ -28,18 +28,19 @@ class Home extends Component {
             docked={false}
             open={this.state.open}
             onRequestChange={open => this.setState({ open })}
+            style={{ backgroundColor: "#4d6073" }}
           >
-            <MenuItem>
+            <MenuItem style={{ backgroundColor: "#4d6073", color: "white" }}>
               <Link to="/" style={{ textDecoration: "none" }}>
                 Home
               </Link>
             </MenuItem>
-            <MenuItem>
+            <MenuItem style={{ backgroundColor: "#4d6073", color: "white" }}>
               <Link to="/tbd" style={{ textDecoration: "none" }}>
                 Artwork
               </Link>
             </MenuItem>
-            <MenuItem>
+            <MenuItem style={{ backgroundColor: "#4d6073", color: "white" }}>
               <Link to="/tbd" style={{ textDecoration: "none" }}>
                 Contact
               </Link>
@@ -59,7 +60,9 @@ class Home extends Component {
             dolor vitae ex dignissim molestie.
           </h4>
         </div>
-        <ImageGridList />
+        <div className="slideshow-container">
+          <ImageGridList />
+        </div>
       </div>
     );
   }
