@@ -46,6 +46,7 @@ class Home extends Component {
             </MenuItem>
           </Drawer>
         </MuiThemeProvider>
+        <img src={`../images/banner.jpg`} style={{ maxWidth: "100%" }} />
         <ImageGridList />
       </div>
     );

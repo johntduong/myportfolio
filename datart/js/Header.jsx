@@ -5,7 +5,7 @@ import AppBar from "material-ui/AppBar";
 
 const muiTheme = getMuiTheme({
   appBar: {
-    color: "#607D8B",
+    color: "#4d6073",
     height: 50
   }
 });
