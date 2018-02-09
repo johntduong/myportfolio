@@ -21,7 +21,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home">
+      <div className="home" style={{ backgroundColor: "#4d6073" }}>
         <Header handler={this.handleToggle} />
         <MuiThemeProvider>
           <Drawer
@@ -47,6 +47,18 @@ class Home extends Component {
           </Drawer>
         </MuiThemeProvider>
         <img src={`../images/banner.jpg`} style={{ maxWidth: "100%" }} />
+        <div className="welcomecontainer">
+          <h4
+            className="welcometext"
+            style={{ color: "white", textAlign: "center" }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+            elementum pellentesque mi ac finibus. Praesent bibendum sollicitudin
+            ex vel scelerisque. Ut consectetur in urna vel ornare. Nam dictum
+            massa a ipsum vulputate, sed fermentum risus egestas. Mauris rhoncus
+            dolor vitae ex dignissim molestie.
+          </h4>
+        </div>
         <ImageGridList />
       </div>
     );
