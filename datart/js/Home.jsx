@@ -21,33 +21,32 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="home" style={{ backgroundColor: "#4d6073" }}>
+      <div className="home">
         <Header handler={this.handleToggle} />
         <MuiThemeProvider>
           <Drawer
             docked={false}
             open={this.state.open}
             onRequestChange={open => this.setState({ open })}
-            style={{ backgroundColor: "#4d6073" }}
           >
-            <MenuItem style={{ backgroundColor: "#4d6073", color: "white" }}>
+            <MenuItem>
               <Link to="/" style={{ textDecoration: "none" }}>
                 Home
               </Link>
             </MenuItem>
-            <MenuItem style={{ backgroundColor: "#4d6073", color: "white" }}>
+            <MenuItem>
               <Link to="/tbd" style={{ textDecoration: "none" }}>
                 Artwork
               </Link>
             </MenuItem>
-            <MenuItem style={{ backgroundColor: "#4d6073", color: "white" }}>
+            <MenuItem>
               <Link to="/tbd" style={{ textDecoration: "none" }}>
                 Contact
               </Link>
             </MenuItem>
           </Drawer>
         </MuiThemeProvider>
-        <img src={`../images/banner.jpg`} style={{ maxWidth: "100%" }} />
+        <img className="banner" src={`../images/banner.jpg`} />
         <div className="welcomecontainer">
           <h4
             className="welcometext"

@@ -6,18 +6,15 @@ class ImageGridList extends Component {
   render() {
     const images = [
       {
-        original:
-          "https://images-na.ssl-images-amazon.com/images/I/814Qpd98BKL._SL1440_.jpg",
+        original: "http://lorempixel.com/1000/600/nature/1/",
         thumbnail: "http://lorempixel.com/250/150/nature/1/"
       },
       {
-        original:
-          "https://images-na.ssl-images-amazon.com/images/I/81QcNeDZRlL._SL1440_.jpg",
+        original: "http://lorempixel.com/1000/600/nature/2/",
         thumbnail: "http://lorempixel.com/250/150/nature/2/"
       },
       {
-        original:
-          "https://images-na.ssl-images-amazon.com/images/I/A1LckeUNrOL._SL1500_.jpg",
+        original: "http://lorempixel.com/1000/600/nature/3/",
         thumbnail: "http://lorempixel.com/250/150/nature/3/"
       }
     ];
