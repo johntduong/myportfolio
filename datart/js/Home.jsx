@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
-import Header from "./Header";
+import Header from "./Header2";
 import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
-import ImageGridList from "./ImageGridList";
+import Carousel from "./Carousel";
 
 class Home extends Component {
   state = {
@@ -60,7 +60,7 @@ class Home extends Component {
           </h4>
         </div>
         <div className="slideshow-container">
-          <ImageGridList />
+          <Carousel />
         </div>
       </div>
     );

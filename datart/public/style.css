@@ -10,14 +10,13 @@
 }
 
 .banner {
-  max-width: 70%;
+  max-width: 100%;
   margin: -5px auto;
-  margin-top: 10px;
 }
 
 .welcomecontainer {
-  background-color: #d5c7b2;
-  max-width: 70%;
+  background-color: #909090;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -25,11 +24,12 @@
   font-family: "Amatic SC", cursive;
   font-size: 35px;
   margin: auto;
+  padding: 15px;
 }
 
 .slideshow-container {
   margin: auto;
-  max-width: 70%;
+  max-width: 100%;
 }
 
 .image-gallery-slide {
@@ -39,4 +39,51 @@
 
 .image-gallery-slide img {
   max-width: 100%;
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+div.slider {
+  overflow: hidden;
+}
+div.slider figure img {
+  width: 20%;
+  float: left;
+}
+div.slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
 }
