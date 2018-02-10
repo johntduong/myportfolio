@@ -6,17 +6,22 @@
 
 .home {
   text-align: center;
-  background-color: #ffffff;
+  background-color: #242b31;
+}
+
+.header-container {
+  margin: auto;
+  max-width: 80%;
 }
 
 .banner {
-  max-width: 85%;
+  max-width: 80%;
   margin: 0px auto;
 }
 
 .welcomecontainer {
   background-color: #909090;
-  max-width: 85%;
+  max-width: 80%;
   margin: -5px auto;
 }
 
@@ -29,7 +34,7 @@
 
 .slideshow-container {
   margin: auto;
-  max-width: 85%;
+  max-width: 80%;
 }
 
 .slider {
@@ -93,10 +98,16 @@ div.slider figure {
   animation: 30s slidy infinite;
 }
 
+.footer {
+  margin: auto;
+  max-width: 80%;
+  background-color: white;
+}
+
 .footer p {
   font-size: 12px;
   font-family: "Amatic SC", cursive;
-  color: white;
+  color: "#4b626de";
   margin: auto;
   padding: 5px;
 }
