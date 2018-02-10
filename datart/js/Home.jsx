@@ -62,6 +62,9 @@ class Home extends Component {
         <div className="slideshow-container">
           <Carousel />
         </div>
+        <div className="footer" style={{ backgroundColor: "#4b626d" }}>
+          <p>Designed by John Duong</p>
+        </div>
       </div>
     );
   }

@@ -15,10 +15,7 @@ const muiTheme = getMuiTheme({
 
 const Header = props => (
   <MuiThemeProvider muiTheme={muiTheme}>
-    <Tabs
-      inkBarStyle={{ backgroundColor: "white" }}
-      style={{ backgroundColor: "black" }}
-    >
+    <Tabs inkBarStyle={{ backgroundColor: "white" }}>
       <Tab
         icon={<FontIcon className="material-icons">home</FontIcon>}
         label="HOME"
