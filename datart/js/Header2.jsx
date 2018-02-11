@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import { Tabs, Tab } from "material-ui/Tabs";
@@ -20,6 +21,8 @@ const Header = props => (
         <Tab
           icon={<FontIcon className="material-icons">home</FontIcon>}
           label="HOME"
+          component={Link}
+          to="/"
         />
         <Tab
           icon={<FontIcon className="material-icons">brush</FontIcon>}

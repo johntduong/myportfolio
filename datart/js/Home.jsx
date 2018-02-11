@@ -6,6 +6,7 @@ import Header from "./Header2";
 import Drawer from "material-ui/Drawer";
 import MenuItem from "material-ui/MenuItem";
 import Carousel from "./Carousel";
+import Footer from "./Footer";
 
 class Home extends Component {
   state = {
@@ -62,9 +63,7 @@ class Home extends Component {
         <div className="slideshow-container">
           <Carousel />
         </div>
-        <div className="footer">
-          <p>Designed by John Duong</p>
-        </div>
+        <Footer />
       </div>
     );
   }

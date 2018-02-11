@@ -4,9 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #242b31;
+}
+
 .home {
   text-align: center;
-  background-color: #242b31;
 }
 
 .header-container {
