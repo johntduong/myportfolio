@@ -14,15 +14,13 @@ const muiTheme = getMuiTheme({
   }
 });
 
-const Header = props => (
+const Header = () => (
   <div className="header-container">
     <MuiThemeProvider muiTheme={muiTheme}>
       <Tabs inkBarStyle={{ backgroundColor: "#4b626d" }}>
         <Tab
           icon={<FontIcon className="material-icons">home</FontIcon>}
           label="HOME"
-          component={Link}
-          to="/"
         />
         <Tab
           icon={<FontIcon className="material-icons">brush</FontIcon>}

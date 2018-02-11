@@ -13,40 +13,10 @@ class Home extends Component {
     open: false
   };
 
-  handleToggle = event => {
-    event.preventDefault();
-    this.setState({ open: !this.state.open });
-  };
-
-  handleClose = () => this.setState({ open: false });
-
   render() {
     return (
       <div className="home">
-        <Header handler={this.handleToggle} />
-        <MuiThemeProvider>
-          <Drawer
-            docked={false}
-            open={this.state.open}
-            onRequestChange={open => this.setState({ open })}
-          >
-            <MenuItem>
-              <Link to="/" style={{ textDecoration: "none" }}>
-                Home
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link to="/tbd" style={{ textDecoration: "none" }}>
-                Artwork
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link to="/tbd" style={{ textDecoration: "none" }}>
-                Contact
-              </Link>
-            </MenuItem>
-          </Drawer>
-        </MuiThemeProvider>
+        <Header />
         <img className="banner" src={`../images/banner.jpg`} />
         <div className="welcomecontainer">
           <h4
