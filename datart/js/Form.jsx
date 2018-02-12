@@ -1,6 +1,7 @@
 import React from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import TextField from "material-ui/TextField";
+import RaisedButton from "material-ui/RaisedButton";
 
 const Form = () => (
   <div className="form-container">
@@ -19,6 +20,9 @@ const Form = () => (
         rows={1}
       />
       <br />
+      <div className="contact-submit-container">
+        <RaisedButton label="Submit" />
+      </div>
     </MuiThemeProvider>
   </div>
 );
