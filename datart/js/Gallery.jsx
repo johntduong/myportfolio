@@ -89,6 +89,9 @@ class Gallery extends Component {
     return (
       <div>
         <Header handler={this.handleToggle} />
+        <div className="gallery-img-container">
+          <img className="gallery-img" src={`../images/gallery.jpg`} />
+        </div>
         <div className="grid-container">
           <Grid className photos={PHOTO_SET} onClick={this.openLightbox} />
           <Lightbox

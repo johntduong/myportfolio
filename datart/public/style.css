@@ -115,6 +115,14 @@ div.slider figure {
   margin: auto;
 }
 
+.gallery-img-container {
+  text-align: center;
+}
+
+.gallery-img {
+  max-width: 80%;
+}
+
 .contact-submit-container {
   margin-top: 15px;
 }
