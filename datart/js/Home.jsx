@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import Header from "./Header2";
@@ -13,10 +12,10 @@ class Home extends Component {
     open: false
   };
 
-  render() {
+  render(props) {
     return (
       <div className="home">
-        <Header />
+        <Header {...props} />
         <img className="banner" src={`../images/banner.jpg`} />
         <div className="welcomecontainer">
           <h4

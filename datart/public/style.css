@@ -40,9 +40,9 @@ body {
   max-width: 80%;
 }
 
-.slider {
+/* .slider {
   height: 450px;
-}
+} */
 
 /* remove image-gallery if needed */
 .image-gallery-slide {
@@ -104,6 +104,7 @@ div.slider figure {
 .footer {
   margin: auto;
   background-color: white;
+  max-width: 80%;
 }
 
 .footer p {
