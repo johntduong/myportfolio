@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import Header from "./Header2";
-import Drawer from "material-ui/Drawer";
-import MenuItem from "material-ui/MenuItem";
 import Carousel from "./Carousel";
 import Footer from "./Footer";
 

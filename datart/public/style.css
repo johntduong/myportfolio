@@ -101,10 +101,22 @@ div.slider figure {
   animation: 30s slidy infinite;
 }
 
+.grid-container {
+  margin: auto;
+  max-width: 80%;
+}
+.form-container {
+  margin: auto;
+  max-width: 80%;
+  text-align: center;
+  background-color: white;
+}
+
 .footer {
   margin: auto;
   background-color: white;
   max-width: 80%;
+  text-align: center;
 }
 
 .footer p {
