@@ -1,10 +1,12 @@
 import React from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
 import TextField from "material-ui/TextField";
 
 const Form = () => (
   <div className="form-container">
+    <div className="form-img-container">
+      <img className="form-img" src={`../images/contactus.jpg`} />
+    </div>
     <MuiThemeProvider>
       <TextField hintText="Your email address" floatingLabelText="email" />
       <br />
