@@ -2,7 +2,8 @@
   "scripts": {
     "start": "webpack --config webpack.config.js",
     "watch": "webpack --watch",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "server": "node server/index.js"
   },
   "name": "datart",
   "version": "1.0.0",
