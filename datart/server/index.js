@@ -3,6 +3,9 @@ const bodyParser = require("body-parser");
 const app = express();
 const nodemailer = require("nodemailer");
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 let transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
@@ -13,25 +16,31 @@ let transporter = nodemailer.createTransport({
   }
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.get("/", (req, res) => {
+  console.log("GET RECEIVED");
+  res.end("ENDING");
+});
 
-app.get("/send", (req, res) => {
+app.post("/send", (req, res) => {
+  console.log("POST RECEIVED");
+  console.log("BODY", req.body);
   let mailOptions = {
-    from: "Contact Form Request: <" + req.query.from + ">", // sender address
+    from: "Contact Form Request: <" + req.body.from + ">", // sender address
     to: "datduongart@gmail.com", // list of receivers
     subject: "Contact Form Message", // Subject line
     text: "Hello", // plain text body
     html:
       "From: " +
-      req.query.name +
+      req.body.name +
       "<br>" +
       "User's email: " +
-      req.query.user +
+      req.body.user +
       "<br>" +
       "Message: " +
-      req.query.text // html body
+      req.body.text // html body
   };
+
+  console.log("These are the mailOptions", mailOptions);
 
   // send mail with defined transport object
   transporter.sendMail(mailOptions, (error, info) => {
@@ -48,6 +57,6 @@ app.get("/send", (req, res) => {
   });
 });
 
-const port = 1337;
+const port = 1377;
 app.listen(port);
 console.log("Listening on port", port);
