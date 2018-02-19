@@ -4,8 +4,8 @@ const webpack = require("webpack");
 module.exports = {
   context: __dirname,
   entry: [
-    "webpack-dev-server/client?http://localhost:8080",
-    "./js/ClientApp.jsx"
+    "./src/ClientApp.jsx",
+    "webpack-dev-server/client?http://localhost:8080"
   ],
   output: {
     path: path.join(__dirname, "public"),
