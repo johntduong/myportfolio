@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "server": "node server/index.js"
+  },
+  "name": "datart-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "nodemailer": "^4.4.2"
+  }
+}
