@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack --config webpack.config.js",
+    "start": "webpack webpack -p",
     "watch": "webpack --watch",
     "dev": "webpack-dev-server"
   },
