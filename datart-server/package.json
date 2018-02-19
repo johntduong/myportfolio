@@ -1,12 +1,12 @@
 {
   "scripts": {
-    "server": "node index.js"
+    "start": "node index.js"
   },
   "name": "datart-server",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "nodemailer": "^4.4.2"

@@ -1,9 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const app = express();
 const nodemailer = require("nodemailer");
 
-app.use(bodyParser.urlencoded({ extended: true }));
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 let transporter = nodemailer.createTransport({
@@ -18,10 +19,15 @@ let transporter = nodemailer.createTransport({
 
 app.get("/", (req, res) => {
   console.log("GET RECEIVED");
-  res.end("ENDING");
+  res.end("ENDING ROOT");
 });
 
-app.post("/send", (req, res) => {
+app.get("/test", (req, res) => {
+  console.log("GET RECEIVED");
+  res.end("ENDING TEST");
+});
+
+app.post("/api/send", (req, res) => {
   console.log("POST RECEIVED");
   console.log("BODY", req.body);
   let mailOptions = {
@@ -57,6 +63,7 @@ app.post("/send", (req, res) => {
   });
 });
 
-const port = 1337;
-app.listen(port);
-console.log("Listening on port", port);
+const port = process.env.PORT || 1234;
+app.listen(port, () => {
+  console.log("listening on port 1234!");
+});

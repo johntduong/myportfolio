@@ -18,7 +18,7 @@ class Form extends Component {
 
   handleSubmit = event => {
     axios
-      .post("http://localhost:1387/send", {
+      .post("https://dashboard.heroku.com/api/send", {
         from: "csu_decyx@yahoo.com",
         name: "John Duong",
         user: "csu_decyx@yahoo.com",
